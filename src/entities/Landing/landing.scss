@@ -1,0 +1,146 @@
+@import "../../assets/css/theme.scss";
+
+main.landing {
+  width: 100%;
+  box-sizing: border-box;
+  nav {
+    padding: 0 $padding-val;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: auto;
+    height: 10vh;
+    padding: 0px 5%;
+    color: $light-color;
+    transition: 0.3s;
+    box-sizing: border-box;
+    a{
+      color: $light-color;
+      text-decoration: none;
+    }
+    &.scrolled {
+      box-shadow: 0 4px 16px rgba(70, 71, 72, 0.7);
+      background: #ad7649;
+      // background: #daaf80;
+      color: white;
+    }
+    .logo {
+      width: 15%;
+      padding: 0 2%;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      a {
+        color: $light-color;
+        text-decoration: none;
+        &:hover {
+          transition: 0.3s ease-in-out;
+          color: $primary-font-color;
+        }
+      }
+    }
+    .nav-menu {
+      padding: 0 5%;
+      box-sizing: border-box;
+      .menu-items {
+        box-sizing: border-box;
+        .menu-item {
+          margin-right: 25px;
+          font-weight: 400;
+          cursor: pointer;
+          &:hover {
+            transition: 0.3s ease-in-out;
+            color: $primary-font-color;
+          }
+        }
+      }
+    }
+    .nav-account {
+      box-sizing: border-box;
+      .nav-account-item{
+        margin-right: 25px;
+      }
+      .nav-search {
+        box-sizing: border-box;
+        .search-btn:hover ~ input {
+          width: 90px;
+        }
+        input {
+          transition: 0.3s;
+          flex: 1;
+          width: 0;
+          background: transparent;
+          border: none;
+          font-family: $primary-font;
+          color: $light-color;
+          &:focus,
+          &:active {
+            outline: none;
+          }
+          &::placeholder {
+            color: white;
+            font-family: $primary-font;
+          }
+        }
+      }
+      i {
+        cursor: pointer;
+        &:hover {
+          transition: 0.3s ease-in-out;
+          color: $primary-font-color;
+        }
+      }
+    }
+    .active {
+      transition: 0.3s ease-in-out;
+      color: $primary-font-color;
+      border-bottom: 2px solid $primary-font-color;
+    }
+  }
+  footer {
+    padding: 10vh 7.5vw;
+    position: relative;
+    &::before {
+      content: "";
+      background: url("../../assets/images/footer.webp") center fixed;
+      position: absolute;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      opacity: 0.15;
+      height: 100%;
+      width: 100%;
+      filter: grayscale(1);
+    }
+    .footer-col {
+      position: relative;
+      z-index: 1;
+      .footer-logo {
+        width: 80%;
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: contain;
+        }
+      }
+      .footer-item {
+        text-decoration: none;
+        color: $primary-font-color;
+        cursor: pointer;
+      }
+      .footer-social-icons {
+        .social-icon {
+          padding: 5px 0 5px 0;
+          margin-left: 10px;
+          font-size: 25px;
+          cursor: pointer;
+          &:hover {
+            transition: 0.3s ease-in-out;
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,308 @@
+@import "./vars";
+@import "./layout";
+
+body {
+  //background: rgba(0, 0, 0, 0.012);
+  font-family: $primary-font;
+}
+
+//scrollbar
+/* width */
+*::-webkit-scrollbar {
+  width: 9px;
+  padding: 0 3px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  background: #bfbfbf;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 10px;
+}
+
+//backgrounds
+.primary-background {
+  background: $primary-color;
+}
+
+.accent-background {
+  background: $accent-color;
+}
+
+.light-background {
+  background: $light-color;
+}
+
+//cards
+.card,
+%card {
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  background: $light-color;
+  transition: 0.3s;
+}
+
+//buttons
+.btn {
+  border: none;
+  padding: 12px 30px;
+  box-shadow: $button-shadow;
+  border-radius: $button-radius;
+  transition: 0.3s;
+  cursor: pointer;
+  font-family: $primary-font;
+  margin-right: 3px;
+  &:hover {
+    transition: 0.3s ease-in-out;
+    color: $light-color;
+    background: $primary-font-color;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.danger {
+    color: white;
+    background: $danger-color;
+  }
+
+  &:disabled {
+    filter: brightness(0.8);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+
+  &.big {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+  }
+
+  &.primary {
+    background: $primary-color;
+    color: $light-color;
+
+    &.shaded {
+      box-shadow: 0 10px 25px #ff69594f;
+    }
+  }
+
+  &.primary-outline {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+
+    &:hover {
+      background: $primary-color;
+      color: $light-color;
+    }
+  }
+
+  &.accent-outline {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    background: transparent;
+
+    &:hover {
+      background: $accent-color;
+      color: $light-color;
+    }
+  }
+
+  &.dark {
+    background: $primary-font-color;
+    color: $light-color;
+  }
+}
+
+.primary-text {
+  color: $primary-color;
+}
+
+.accent-text {
+  color: $accent-color;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.icon-btn {
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  @extend %flex-centered;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+
+  &.circular {
+    border-radius: 50%;
+  }
+
+  &.primary {
+    background: $primary-color;
+    color: white;
+  }
+
+  &.dark {
+    background: $primary-font-color;
+    color: white;
+  }
+
+  &.light {
+    border: 1px solid $light-color;
+
+    i {
+      color: white;
+    }
+
+    &:hover {
+      background: $light-color;
+
+      i {
+        color: $primary-font;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  background: $primary-font-color;
+  color: $light-color;
+}
+
+//
+.view {
+  height: 100vh;
+  width: 100%;
+}
+
+//texts
+%big-title,
+.big-title {
+  font-family: $title-font;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+%text-right,
+.text-right {
+  text-align: right;
+}
+
+%text-center,
+.text-center {
+  text-align: center;
+}
+
+%text-left,
+.text-left {
+  text-align: left;
+}
+
+%title,
+.title {
+  font-size: 1.2rem;
+  font-family: $title-font;
+}
+
+.primary-link {
+  font-family: $primary-font;
+  margin: 10px 0;
+  color: $primary-color;
+}
+
+//animations
+.fadeIn,
+%fadeIn {
+  animation: 0.3s fadeIn;
+}
+
+//
+// .logo {
+//   cursor: pointer;
+//   font-size: 2rem;
+//   font-weight: bolder;
+//   font-family: 'Poppins', sans-serif;
+// }
+
+.form-group {
+  margin-bottom: 12px;
+
+  .input-group {
+    border-radius: $border-radius;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    label {
+      width: 60%;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.8);
+      font-size: 0.8rem;
+    }
+
+    div.input-box {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(0, 0, 0, 0.05);
+      border-radius: $border-radius;
+      input,
+      select,
+      textarea {
+        flex: 1;
+        background: transparent;
+        border: none;
+        font-family: $primary-font;
+        font-size: 1.04rem;
+
+        &::placeholder {
+          font-family: $primary-font;
+        }
+
+        &:active,
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .error {
+    font-size: 0.7rem;
+  }
+}
+
+.section-title {
+  font-size: 2vw;
+  letter-spacing: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+.section-subtitle{
+  margin: 0 30vh;
+  text-align: center;
+}
+//tooltips

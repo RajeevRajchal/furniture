@@ -1,0 +1,186 @@
+@import "src/assets/css/theme";
+
+main.home {
+  position: relative;
+  section {
+    padding: $section-padding;
+    box-sizing: border-box;
+  }
+  section.welcome {
+    position: relative;
+    height: calc(100vh - 50px);
+    margin-top: -10vh;
+    padding: 0;
+    .welcome-background {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: url("./banner.jpg");
+      background-size: cover;
+      .background {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(135deg, $light-color, #000000);
+        opacity: 0.5;
+      }
+    }
+    .welcome-speech {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $light-color;
+      width: 60%;
+      text-align: center;
+      .title {
+        font-size: 4vw;
+        font-weight: bold;
+        line-height: 4.2vw;
+        text-shadow: 1px 1px 16px rgba(0, 0, 0, 0.22);
+      }
+      .sub-title {
+        font-size: 2vw;
+        line-height: 2vw;
+      }
+    }
+  }
+  section.whowe {
+    margin-top: 30px;
+    .whowe-subtitle {
+      margin: 0 30vh;
+      text-align: center;
+    }
+    .whowe-showcase {
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+  section.furniture {
+    position: relative;
+    &::before {
+      content: "";
+      background: url("../../../../assets/images/furniture.jpg") center fixed;
+      position: absolute;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      opacity: 0.05;
+      height: 100%;
+      width: 100%;
+      filter: grayscale(1);
+    }
+    .furniture-body {
+      width: 100%;
+      margin-top: 30px;
+      box-sizing: border-box;
+      .furniture-select {
+        position: relative;
+        box-sizing: border-box;
+        width: 18.5%;
+        margin-bottom: 1%;
+        margin-right: 1.5%;
+        img {
+          width: 100%;
+          height: 40vh;
+          object-fit: cover;
+        }
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        &:hover .furniture-selected-description {
+          -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+          transform: scale(1);
+          opacity: 1;
+        }
+        &:hover .furniture-selected-description {
+          opacity: 0.8;
+        }
+      }
+      .furniture-selected-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+        background: #f7f7f7;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        -webkit-transition: 0.3s ease;
+        transition: 0.3s ease;
+        .selected-text {
+          margin-top: 20px;
+          font-size: 13px;
+          text-align: center;
+        }
+        .selected-readmore {
+          margin-top: 10px;
+          color: $light-color;
+          background: $primary-font-color;
+          &:hover {
+            color: $primary-font-color;
+            background: $light-color;
+          }
+        }
+      }
+    }
+  }
+  section.knowwood {
+    .knowwood-body {
+      margin-top: 30px;
+      box-sizing: border-box;
+      width: 100%;
+      box-shadow: $card-shadow;
+      .knowwood-image {
+        margin-right: 20px;
+        img {
+          width: 70vh;
+          height: 40vh;
+          object-fit: cover;
+        }
+      }
+      .knowwood-text-area {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 25px;
+        .origial-name {
+          font-size: 10px;
+        }
+        .knowwood-description {
+          font-size: 14px;
+        }
+        button {
+          margin-bottom: 25px;
+          width: 30vh;
+        }
+      }
+    }
+  }
+  .floating-button {
+    position: fixed;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    i{
+      font-size: 3rem;
+    }
+  }
+}

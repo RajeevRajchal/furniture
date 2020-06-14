@@ -1,0 +1,153 @@
+@import "../../assets/css/theme";
+main.admin {
+  height: 100vh;
+  width: 100%;
+  .sidebar {
+    width: 20%;
+    background: $light-color;
+    box-sizing: border-box;
+    position: relative;
+    .logo {
+      height: 35vh;
+      width: 100%;
+      background: $primary-color;
+      align-items: center;
+      padding: 20px;
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+      box-sizing: border-box;
+      .logo-contianer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        .logo-title {
+          font-size: 30px;
+          font-weight: bold;
+          color: $light-color;
+          box-sizing: border-box;
+          text-transform: capitalize;
+        }
+
+        .card {
+          cursor: pointer;
+          margin-top: 10vh;
+          width: 107%;
+          padding: 15px 20px;
+          a {
+            text-decoration: none;
+            color: $primary-font-color;
+          }
+          .user-img {
+            margin-right: 1rem;
+            padding: 5px;
+            border-radius: $border-radius;
+            border: 1px solid $primary-color;
+            cursor: pointer;
+            img {
+              width: 20;
+              height: 20px;
+            }
+          }
+          .user_name {
+            margin-right: 1rem;
+            text-transform: capitalize;
+          }
+          i {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .sidebar-items {
+      flex: 1;
+      z-index: 1;
+      padding: 0 1vw;
+      margin-top: 4vh;
+      .sidebar-item {
+        text-decoration: none;
+        margin-bottom: 2vh;
+        width: 100%;
+        padding: 15px 20px;
+        font-size: 0.9rem;
+        color: $primary-font-color;
+        text-transform: capitalize;
+        cursor: pointer;
+        box-sizing: border-box;
+        transition: 0.3s;
+        i {
+          margin-right: 20px;
+        }
+        label {
+          cursor: pointer;
+        }
+        &.active {
+          background: #e6e6ea;
+          border-radius: 0 10px 10px 0px;
+          position: relative;
+          box-shadow: $button-shadow;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  .main-content {
+    flex: 1;
+    height: 100vh;
+    background: #dadada;
+    box-sizing: border-box;
+    position: relative;
+    nav {
+      background: $light-color;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      padding: 0 3vw;
+      height: 8vh;
+      width: 100%;
+      .nav-search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        border: 2px solid $primary-color;
+        border-radius: 7px;
+        input {
+          flex: 1;
+          border:none;
+          background: transparent;
+          padding: 2px 7px;
+          font-family: $primary-font;
+          font-size: 0.9rem;
+          &::placeholder {
+            font-family: $primary-font;
+            font-size: 0.9rem;
+          }
+          &:active,
+          &:focus {
+            outline: none;
+          }
+        }
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+    .content {
+      height: 100%;
+      box-sizing: border-box;
+      // margin:2% 4%;
+      padding: 2vh 3vw 2vh;
+      box-sizing: border-box;
+      overflow: auto;
+    }
+  }
+}
