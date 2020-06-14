@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/furniture/static/css/main.f5d883a9.chunk.css",
+    "main.js": "/furniture/static/js/main.2f7c34a8.chunk.js",
+    "main.js.map": "/furniture/static/js/main.2f7c34a8.chunk.js.map",
+    "runtime~main.js": "/furniture/static/js/runtime~main.2ead7011.js",
+    "runtime~main.js.map": "/furniture/static/js/runtime~main.2ead7011.js.map",
+    "static/js/2.82821282.chunk.js": "/furniture/static/js/2.82821282.chunk.js",
+    "static/js/2.82821282.chunk.js.map": "/furniture/static/js/2.82821282.chunk.js.map",
+    "index.html": "/furniture/index.html",
+    "precache-manifest.ddf90fd5e828f2ba1bdfa9d645894c33.js": "/furniture/precache-manifest.ddf90fd5e828f2ba1bdfa9d645894c33.js",
+    "service-worker.js": "/furniture/service-worker.js",
+    "static/css/main.f5d883a9.chunk.css.map": "/furniture/static/css/main.f5d883a9.chunk.css.map",
+    "static/media/home.scss": "/furniture/static/media/furniture.3e672f2d.jpg",
+    "static/media/landing.scss": "/furniture/static/media/footer.6a3cfd66.webp"
+  }
+}
